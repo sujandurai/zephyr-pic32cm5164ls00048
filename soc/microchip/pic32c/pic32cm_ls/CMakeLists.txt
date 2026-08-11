@@ -1,7 +1,5 @@
-config SOC_FAMILY_MICROCHIP_PIC32CM_LS00
-	bool
+add_subdirectory(common)
+add_subdirectory_given_handle(SOC_SERIES ${SOC_SERIES})
 
-config SOC_FAMILY
-	default "microchip_pic32cm_ls00" if SOC_FAMILY_MICROCHIP_PIC32CM_LS00
-
-rsource "*/Kconfig.soc"
+zephyr_include_directories(${SOC_SERIES})
+zephyr_include_directories(common)

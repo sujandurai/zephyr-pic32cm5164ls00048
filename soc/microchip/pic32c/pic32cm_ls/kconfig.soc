@@ -1,13 +1,12 @@
-config SOC_SERIES_PIC32CM_LS00
+# Copyright (c) 2026 Microchip Technology Inc.
+
+# SPDX-License-Identifier: Apache-2.0
+
+config SOC_FAMILY_MICROCHIP_PIC32CM_LS
 	bool
-	select SOC_FAMILY_MICROCHIP_PIC32CM_LS
 
-config SOC_PIC32CM5164LS0048
-	bool
-	select SOC_SERIES_PIC32CM_LS00
+config SOC_FAMILY
+	default "microchip_pic32cm_ls" if SOC_FAMILY_MICROCHIP_PIC32CM_LS
 
-config SOC_SERIES
-	default "pic32cm_ls00" if SOC_SERIES_PIC32CM_LS00
+rsource "*/Kconfig.soc"
 
-config SOC
-	default "pic32cm5164ls0048" if SOC_PIC32CM5164LS0048
