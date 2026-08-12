@@ -3,4 +3,4 @@ family:
   series:
   - name: pic32cm_ls00
     socs:
-    - name: pic32cm5164ls0048
+    - name: pic32cm5164ls00048

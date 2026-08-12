@@ -1,0 +1,18 @@
+# Copyright (c) 2026 Microchip Technology Inc.
+# SPDX-License-Identifier: Apache-2.0
+
+config SOC_SERIES_PIC32CM_LS00
+	bool
+	select SOC_FAMILY_MICROCHIP_PIC32CM_LS
+	default y
+
+config NUM_IRQ_PRIO_BITS
+        int
+	default 2
+
+config SOC_PIC32CM5164LS00048
+	bool
+	select SOC_SERIES_PIC32CM_LS00
+        default y
+	help
+	  PIC32CM5164LS00048 (512KB Flash, 64KB SRAM, 48-pin)
