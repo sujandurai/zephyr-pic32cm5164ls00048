@@ -1,0 +1,10 @@
+# Copyright (c) 2026 Microchip Technology Inc.
+
+# SPDX-License-Identifier: Apache-2.0
+
+board:
+  name: pic32cm5164ls00048
+  full_name: PIC32CM5164LS00048
+  vendor: microchip
+  socs:
+    - name: pic32cm5164ls00048
