@@ -4,15 +4,4 @@
 
 #include <mem.h>
 #include <microchip/pic32c/pic32cm_ls/common/pic32cm_ls_48.dtsi>
-
-/ {
-	soc {
-		flash0: flash@0 {
-			reg = <0x0 DT_SIZE_K(512)>;
-		};
-
-		sram0: memory@20000000 {
-			reg = <0x20000000 DT_SIZE_K(64)>;
-		};
-	};
-};
+#include <microchip/pic32c/pic32cm_ls/common/pic32cm_5164_ls.dtsi>
