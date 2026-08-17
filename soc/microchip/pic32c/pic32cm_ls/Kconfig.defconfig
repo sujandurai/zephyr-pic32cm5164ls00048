@@ -10,7 +10,8 @@ config SOC
 	default "pic32cm5164ls00048" if SOC_PIC32CM5164LS00048
 
 config SYS_CLOCK_HW_CYCLES_PER_SEC
-	default 48000000
+	default $(dt_node_int_prop_int,/cpus/cpu@0,clock-frequency)
+
 
 config CORTEX_M_SYSTICK
 	default y
@@ -23,9 +24,6 @@ config CORTEX_M_SYSTICK_LPM_TIMER_NONE
 
 config NUM_IRQS
 	default 71
-
-config CPU_HAS_ARM_MPU
-	default y
 
 config CPU_HAS_ARM_MPU
 	default y

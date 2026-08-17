@@ -1,0 +1,11 @@
+porta: gpio@41000000 {
+    compatible = "atmel,sam0-gpio";
+    port = <0>;
+    ...
+};
+
+portb: gpio@41000080 {
+    compatible = "atmel,sam0-gpio";
+    port = <1>;
+    ...
+};
