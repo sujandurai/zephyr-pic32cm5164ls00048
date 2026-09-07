@@ -11,20 +11,16 @@
 
 #include <zephyr/types.h>
 
-/* CMSIS device feature definitions */
-#define __NVIC_PRIO_BITS 2U
-#define __MPU_PRESENT    1U
-#define __VTOR_PRESENT   1U
-#define __FPU_PRESENT    0U
+/* CMSIS device feature definitions are now provided by the DFP header */
 
 #if defined(CONFIG_SOC_PIC32CM5164LS00048)
 #include <pic32cm5164ls00048.h>
-#include <port.h>
 #else
 #error "Library does not support the specified device."
 #endif
 
-#include <pic32cm_ls00_soc.h>
+
+#include <pic32cm_ls.h>
 
 #endif /* _ASMLANGUAGE */
 
