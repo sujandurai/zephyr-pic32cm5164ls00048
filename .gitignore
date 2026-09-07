@@ -19,11 +19,15 @@ twister-out/
 *.ninja_log
 .ninja_*
 
-# Zephyr west metadata & external untracked modules
+# Zephyr west metadata & unused external vendor modules
 .west/
-modules/
 bootloader/
 tools/
+modules/*
+!modules/hal/
+modules/hal/*
+!modules/hal/microchip/
+!modules/hal/cmsis/
 
 # Temporary files and OS artifacts
 .DS_Store
