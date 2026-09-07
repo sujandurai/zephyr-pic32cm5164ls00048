@@ -1,0 +1,12 @@
+# Copyright (c) 2026 Microchip Technology Inc.
+# SPDX-License-Identifier: Apache-2.0
+
+description: Microchip PIC32CM LS00 GCLK peripheral channel
+
+compatible: "microchip,pic32cm-ls-gclkperiph"
+
+include: [clock-controller.yaml, base.yaml]
+
+properties:
+    "#clock-cells":
+      const: 0

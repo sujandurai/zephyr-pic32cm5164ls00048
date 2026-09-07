@@ -1,0 +1,30 @@
+/*
+ * Copyright (c) 2026 Microchip Technology Inc.
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+#include <dt-bindings/pic32c/pic32cm_ls/common/mchp_pinctrl_pinmux_pic32c.h>
+
+#ifndef MCHP_PINMUX_PB08_SERCOM3_PAD0
+#define MCHP_PINMUX_PB08_SERCOM3_PAD0 MCHP_PINMUX(b, 8, d, periph)
+#endif
+
+#ifndef MCHP_PINMUX_PB09_SERCOM3_PAD1
+#define MCHP_PINMUX_PB09_SERCOM3_PAD1 MCHP_PINMUX(b, 9, d, periph)
+#endif
+
+&pinctrl {
+	sercom0_uart_default: sercom0_uart_default {
+		group1 {
+			pinmux = <MCHP_PINMUX_PA22_SERCOM0_PAD0>,
+				 <MCHP_PINMUX_PA23_SERCOM0_PAD1>;
+		};
+	};
+	
+	sercom3_uart_default: sercom3_uart_default {
+		group1 {
+			pinmux = <MCHP_PINMUX_PB08_SERCOM3_PAD0>,
+				 <MCHP_PINMUX_PB09_SERCOM3_PAD1>;
+		};
+	};
+};
