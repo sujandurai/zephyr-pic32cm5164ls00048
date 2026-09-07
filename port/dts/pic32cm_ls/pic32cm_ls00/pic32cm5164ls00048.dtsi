@@ -1,0 +1,7 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+#include <mem.h>
+#include <microchip/pic32c/pic32cm_ls/common/pic32cm_ls_48.dtsi>
+#include <microchip/pic32c/pic32cm_ls/common/pic32cm_5164_ls.dtsi>

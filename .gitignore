@@ -1,0 +1,32 @@
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+
+# Build artifacts and compiler outputs
+build/
+build_test/
+twister-out/
+**/build/
+*/**/build/
+*.o
+*.elf
+*.bin
+*.hex
+*.ninja
+*.ninja_deps
+*.ninja_log
+.ninja_*
+
+# Zephyr west metadata & external untracked modules
+.west/
+modules/
+bootloader/
+tools/
+
+# Temporary files and OS artifacts
+.DS_Store
+*.swp
+*~
+dev?null

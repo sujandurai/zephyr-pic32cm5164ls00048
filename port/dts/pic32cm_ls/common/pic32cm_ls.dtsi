@@ -1,0 +1,93 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+#include <arm/armv8-m.dtsi>
+#include <zephyr/dt-bindings/gpio/gpio.h>
+
+/ {
+	cpus {
+		#address-cells = <1>;
+		#size-cells = <0>;
+
+		cpu0: cpu@0 {
+			device_type = "cpu";
+			compatible = "arm,cortex-m23";
+			reg = <0>;
+			#address-cells = <1>;
+			#size-cells = <1>;
+
+			mpu: mpu@e000ed90 {
+				compatible = "arm,armv8m-mpu";
+				reg = <0xe000ed90 0x40>;
+			};
+		};
+	};
+
+	soc {
+		#address-cells = <1>;
+		#size-cells = <1>;
+
+		sram0: memory@20000000 {
+			compatible = "mmio-sram";
+			reg = <0x20000000 0x10000>;
+		};
+
+		clock: clock@40000800 {
+			compatible = "microchip,pic32cm-ls-clock";
+			reg = <0x40000800 0x400>;
+			#clock-cells = <1>;
+			status = "okay";
+		};
+		
+		pinctrl: pinctrl@40003200 {
+			compatible = "microchip,port-g1-pinctrl";
+			#address-cells = <1>;
+			#size-cells = <1>;
+			reg = <0x40003200 0x100>;
+			ranges = <0x40003200 0x40003200 0x100>;
+
+			porta: gpio@40003200 {
+				compatible = "microchip,port-g1-gpio";
+				reg = <0x40003200 0x80>;
+				gpio-controller;
+				#gpio-cells = <2>;
+				#microchip,pin-cells = <2>;
+				status = "okay";
+			};
+
+			portb: gpio@40003280 {
+				compatible = "microchip,port-g1-gpio";
+				reg = <0x40003280 0x80>;
+				gpio-controller;
+				#gpio-cells = <2>;
+				#microchip,pin-cells = <2>;
+				status = "okay";
+			};
+		};
+
+		sercom0: sercom@42000400 {
+			compatible = "microchip,sercom-g1";
+			reg = <0x42000400 0x40>;
+			interrupts = <31 0>, <32 0>, <33 0>, <34 0>;
+			interrupt-names = "dre", "txc", "rxc", "other";
+			clocks = <&clock 0>, <&clock 1>;
+			clock-names = "mclk", "gclk";
+			status = "disabled";
+		};
+
+				sercom3: sercom@42001000 {
+			compatible = "microchip,sercom-g1";
+			reg = <0x42001000 0x40>;
+			interrupts = <43 0>, <44 0>, <45 0>, <46 0>;
+			interrupt-names = "dre", "txc", "rxc", "other";
+			clocks = <&clock 0>, <&clock 1>;
+			clock-names = "mclk", "gclk";
+			status = "disabled";
+		};
+	};
+};
+
+&nvic {
+	arm,num-irq-priority-bits = <2>;
+};

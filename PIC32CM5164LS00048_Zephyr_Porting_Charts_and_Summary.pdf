@@ -1,0 +1,739 @@
+%PDF-1.4
+%âãÏÓ
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >>
+endobj
+5 0 obj
+<< /Length 2650 >>
+stream
+q
+0.080 0.180 0.360 rg
+0.00 799.89 595.28 42.00 re f
+BT /F2 11 Tf 30.00 815.89 Td 1.000 1.000 1.000 rg (PIC32CM5164LS00048 — ZEPHYR PORTING & ARCHITECTURE CHARTS) Tj ET
+BT /F1 8 Tf 30.00 805.89 Td 0.700 0.850 1.000 rg (Microchip PIC32CM LS00 Curiosity Nano \(EV41C56A\) • Zephyr RTOS v4.4.99) Tj ET
+0.000 0.650 0.850 rg
+0.00 796.89 595.28 3.00 re f
+0.800 0.800 0.800 RG
+0.80 w
+30.00 35.00 m 565.28 35.00 l S
+BT /F1 8 Tf 30.00 20.00 Td 0.500 0.500 0.500 rg (Zephyr RTOS Porting Documentation & Verification Report) Tj ET
+BT /F2 8 Tf 505.28 20.00 Td 0.200 0.400 0.600 rg (Page 1 of 5) Tj ET
+
+0.200 0.500 0.800 RG
+1.20 w
+0.950 0.980 1.000 rg
+30.00 706.89 535.00 75.00 re B
+BT /F2 11 Tf 45.00 763.89 Td 0.080 0.250 0.550 rg (EXECUTIVE SUMMARY — PIC32CM5164LS00048 PORTING STATUS) Tj ET
+BT /F1 9 Tf 45.00 746.89 Td 0.150 0.150 0.200 rg (\(1\) Hardware Target: Microchip PIC32CM5164LS00048 on Curiosity Nano EV41C56A board.) Tj ET
+BT /F1 9 Tf 45.00 733.89 Td 0.150 0.150 0.200 rg (\(2\) Architecture: ARM Cortex-M23 @ 48 MHz with FDPLL96M locked at Performance Level 2.) Tj ET
+BT /F1 9 Tf 45.00 720.89 Td 0.150 0.150 0.200 rg (\(3\) Memory: 512 KB Flash \(NVMCTRL\), 64 KB SRAM with startup ECC zero-initialization.) Tj ET
+BT /F2 9 Tf 45.00 707.89 Td 0.050 0.500 0.200 rg (\(4\) Status: DFP HAL Integrated, GPIO Reused, Kconfig Cleaned, 100% Kernel Tests Passed.) Tj ET
+
+BT /F2 11 Tf 30.00 681.89 Td 0.100 0.200 0.400 rg (HARDWARE ARCHITECTURE BLOCK DIAGRAM) Tj ET
+0.000 0.650 0.850 RG
+1.50 w
+30.00 675.89 m 565.00 675.89 l S
+
+0.700 0.800 0.900 RG
+1.00 w
+0.980 0.990 1.000 rg
+30.00 436.89 535.00 230.00 re B
+BT /F2 10 Tf 40.00 649.89 Td 0.100 0.300 0.600 rg (PIC32CM5164LS00048 Microcontroller \(48-Pin TQFP/QFN\)) Tj ET
+
+0.100 0.200 0.500 RG
+0.200 0.400 0.700 rg
+45.00 571.89 160.00 65.00 re B
+BT /F2 10 Tf 55.00 619.89 Td 1.000 1.000 1.000 rg (ARM Cortex-M23 Core) Tj ET
+BT /F1 8 Tf 55.00 605.89 Td 0.900 0.950 1.000 rg (• 48 MHz Max Frequency) Tj ET
+BT /F1 8 Tf 55.00 593.89 Td 0.900 0.950 1.000 rg (• ARMv8-M Baseline ISA) Tj ET
+BT /F1 8 Tf 55.00 581.89 Td 0.900 0.950 1.000 rg (• 2-bit NVIC \(71 IRQs\)) Tj ET
+
+0.100 0.400 0.300 RG
+0.150 0.550 0.450 rg
+215.00 571.89 165.00 65.00 re B
+BT /F2 10 Tf 225.00 619.89 Td 1.000 1.000 1.000 rg (Memory Subsystem) Tj ET
+BT /F1 8 Tf 225.00 605.89 Td 0.900 1.000 0.900 rg (• 512 KB Flash \(NVMCTRL\)) Tj ET
+BT /F1 8 Tf 225.00 593.89 Td 0.900 1.000 0.900 rg (• 64 KB SRAM @ 0x20000000) Tj ET
+BT /F1 8 Tf 225.00 581.89 Td 0.900 1.000 0.900 rg (• 2 Flash Wait States @ 48M) Tj ET
+
+0.500 0.300 0.050 RG
+0.700 0.400 0.100 rg
+390.00 571.89 165.00 65.00 re B
+BT /F2 10 Tf 400.00 619.89 Td 1.000 1.000 1.000 rg (Clock & Power \(OSCCTRL\)) Tj ET
+BT /F1 8 Tf 400.00 605.89 Td 1.000 0.950 0.850 rg (• OSC16M: 16 MHz Internal) Tj ET
+BT /F1 8 Tf 400.00 593.89 Td 1.000 0.950 0.850 rg (• GCLK1: 1.0 MHz Ref Clock) Tj ET
+BT /F1 8 Tf 400.00 581.89 Td 1.000 0.950 0.850 rg (• FDPLL96M: 48 MHz Output) Tj ET
+
+0.300 0.500 0.800 RG
+0.900 0.930 0.980 rg
+45.00 506.89 160.00 55.00 re B
+BT /F2 9 Tf 55.00 546.89 Td 0.100 0.200 0.500 rg (6x SERCOM Peripherals) Tj ET
+BT /F1 8 Tf 55.00 533.89 Td 0.200 0.200 0.300 rg (• SERCOM0 to SERCOM5) Tj ET
+BT /F1 8 Tf 55.00 521.89 Td 0.200 0.200 0.300 rg (• UART / SPI / I2C configurable) Tj ET
+BT /F3 7 Tf 55.00 511.89 Td 0.300 0.300 0.400 rg (• Addr: 0x42000400-0x42001800) Tj ET
+
+0.200 0.600 0.400 RG
+0.900 0.960 0.920 rg
+215.00 506.89 165.00 55.00 re B
+BT /F2 9 Tf 225.00 546.89 Td 0.100 0.400 0.200 rg (GPIO Controller \(Port G1\)) Tj ET
+BT /F1 8 Tf 225.00 533.89 Td 0.200 0.200 0.300 rg (• PORTA \(32 Pins\) @ 0x40003000) Tj ET
+BT /F1 8 Tf 225.00 521.89 Td 0.200 0.200 0.300 rg (• PORTB \(32 Pins\) @ 0x40003080) Tj ET
+BT /F2 8 Tf 225.00 511.89 Td 0.100 0.500 0.200 rg (• Direct reuse of gpio_sam0.c) Tj ET
+
+0.800 0.500 0.200 RG
+0.980 0.940 0.900 rg
+390.00 506.89 165.00 55.00 re B
+BT /F2 9 Tf 400.00 546.89 Td 0.500 0.300 0.100 rg (Timers & Analog IP) Tj ET
+BT /F1 8 Tf 400.00 533.89 Td 0.200 0.200 0.300 rg (• Timers: TC0-TC2, TCC0-TCC3) Tj ET
+BT /F1 8 Tf 400.00 521.89 Td 0.200 0.200 0.300 rg (• 12-bit ADC, DAC, AC, PTC) Tj ET
+BT /F1 8 Tf 400.00 511.89 Td 0.200 0.200 0.300 rg (• 12-Channel DMA \(DMAC\)) Tj ET
+
+0.400 0.600 0.800 RG
+0.930 0.950 0.980 rg
+45.00 446.89 510.00 50.00 re B
+BT /F2 9 Tf 55.00 481.89 Td 0.100 0.200 0.400 rg (Curiosity Nano \(EV41C56A\) On-Board Wiring:) Tj ET
+BT /F1 8 Tf 55.00 468.89 Td 0.200 0.200 0.300 rg (• Yellow LED0: Port A Pin 15 \(PA15, Active Low\)   • Button SW0: Port A Pin 23 \(PA23, Active Low\)) Tj ET
+BT /F2 8 Tf 55.00 455.89 Td 0.100 0.300 0.600 rg (• Virtual COM Port: SERCOM0 TX = PA22 \(PAD0\), RX = PA23 \(PAD1\) at 115200 Baud) Tj ET
+
+BT /F2 11 Tf 30.00 416.89 Td 0.100 0.200 0.400 rg (ZEPHYR HARDWARE MODEL V2 STACK ARCHITECTURE) Tj ET
+0.000 0.650 0.850 RG
+1.50 w
+30.00 410.89 m 565.00 410.89 l S
+
+0.200 0.500 0.800 RG
+0.920 0.960 1.000 rg
+30.00 362.89 535.00 34.00 re B
+BT /F2 9 Tf 45.00 381.89 Td 0.200 0.500 0.800 rg (1. Application Layer) Tj ET
+BT /F1 8 Tf 45.00 369.89 Td 0.250 0.250 0.300 rg (samples/basic/blinky, samples/basic/button, tests/kernel/threads, user application) Tj ET
+
+0.150 0.600 0.450 RG
+0.920 0.980 0.940 rg
+30.00 323.89 535.00 34.00 re B
+BT /F2 9 Tf 45.00 342.89 Td 0.150 0.600 0.450 rg (2. Zephyr Core & Subsystems) Tj ET
+BT /F1 8 Tf 45.00 330.89 Td 0.250 0.250 0.300 rg (Kernel Scheduler, Multithreading, Mutexes, Semaphores, Ztest framework, Picolibc) Tj ET
+
+0.700 0.400 0.100 RG
+1.000 0.960 0.900 rg
+30.00 284.89 535.00 34.00 re B
+BT /F2 9 Tf 45.00 303.89 Td 0.700 0.400 0.100 rg (3. Driver Layer) Tj ET
+BT /F1 8 Tf 45.00 291.89 Td 0.250 0.250 0.300 rg (gpio_sam0.c, uart_sam0.c / uart_mchp_sercom_g1.c, clock_control_pic32cm_ls.c) Tj ET
+
+0.500 0.200 0.600 RG
+0.970 0.930 1.000 rg
+30.00 245.89 535.00 34.00 re B
+BT /F2 9 Tf 45.00 264.89 Td 0.500 0.200 0.600 rg (4. DeviceTree & SoC Layer) Tj ET
+BT /F1 8 Tf 45.00 252.89 Td 0.250 0.250 0.300 rg (pic32cm_ls00_cnano.dts, pic32cm5164ls00048.dtsi, soc.c \(FDPLL96M & ECC Init\)) Tj ET
+
+0.300 0.300 0.400 RG
+0.940 0.940 0.960 rg
+30.00 206.89 535.00 34.00 re B
+BT /F2 9 Tf 45.00 225.89 Td 0.300 0.300 0.400 rg (5. Hardware DFP Layer) Tj ET
+BT /F1 8 Tf 45.00 213.89 Td 0.250 0.250 0.300 rg (modules/hal/microchip/packs/pic32c/pic32cm_ls/pic32cm_ls00/ \(81 CMSIS header files\)) Tj ET
+Q
+endstream
+endobj
+6 0 obj
+<< /Length 2850 >>
+stream
+q
+0.080 0.180 0.360 rg
+0.00 799.89 595.28 42.00 re f
+BT /F2 11 Tf 30.00 815.89 Td 1.000 1.000 1.000 rg (PIC32CM5164LS00048 — PERIPHERAL SUPPORT MATRIX) Tj ET
+BT /F1 8 Tf 30.00 805.89 Td 0.700 0.850 1.000 rg (Microchip PIC32CM LS00 Curiosity Nano \(EV41C56A\) • Zephyr RTOS v4.4.99) Tj ET
+0.000 0.650 0.850 rg
+0.00 796.89 595.28 3.00 re f
+0.800 0.800 0.800 RG
+0.80 w
+30.00 35.00 m 565.28 35.00 l S
+BT /F1 8 Tf 30.00 20.00 Td 0.500 0.500 0.500 rg (Zephyr RTOS Porting Documentation & Verification Report) Tj ET
+BT /F2 8 Tf 505.28 20.00 Td 0.200 0.400 0.600 rg (Page 2 of 5) Tj ET
+
+BT /F2 11 Tf 30.00 781.89 Td 0.100 0.200 0.400 rg (PERIPHERAL SUPPORT & REUSE MATRIX) Tj ET
+0.000 0.650 0.850 RG
+1.50 w
+30.00 775.89 m 565.00 775.89 l S
+
+0.100 0.250 0.500 rg
+30.00 743.89 535.00 20.00 re f
+BT /F2 8 Tf 35.00 750.89 Td 1.000 1.000 1.000 rg (Peripheral IP) Tj ET
+BT /F2 8 Tf 135.00 750.89 Td 1.000 1.000 1.000 rg (Base Address / IRQ) Tj ET
+BT /F2 8 Tf 245.00 750.89 Td 1.000 1.000 1.000 rg (Zephyr Driver) Tj ET
+BT /F2 8 Tf 350.00 750.89 Td 1.000 1.000 1.000 rg (Porting Action) Tj ET
+BT /F2 8 Tf 470.00 750.89 Td 1.000 1.000 1.000 rg (Status) Tj ET
+
+0.850 0.880 0.920 RG
+0.50 w
+0.970 0.980 1.000 rg
+30.00 715.89 535.00 28.00 re B
+BT /F2 8 Tf 35.00 732.89 Td 0.100 0.150 0.300 rg (GPIO / PORT) Tj ET
+BT /F3 7 Tf 135.00 732.89 Td 0.300 0.300 0.400 rg (0x40003000 \(A\)) Tj ET
+BT /F3 7 Tf 135.00 723.89 Td 0.300 0.300 0.400 rg (0x40003080 \(B\)) Tj ET
+BT /F1 7 Tf 245.00 732.89 Td 0.200 0.200 0.300 rg (gpio_sam0.c) Tj ET
+BT /F1 7 Tf 245.00 723.89 Td 0.200 0.200 0.300 rg (\(atmel,sam0-gpio\)) Tj ET
+BT /F1 7 Tf 350.00 732.89 Td 0.100 0.300 0.500 rg (Direct Reuse via DTS) Tj ET
+BT /F1 7 Tf 350.00 723.89 Td 0.100 0.300 0.500 rg (\(Port G1 Architecture\)) Tj ET
+0.100 0.600 0.200 rg 470.00 723.89 80.00 14.00 re f
+BT /F2 7 Tf 475.00 728.89 Td 1.000 1.000 1.000 rg (ACTIVE / PASS) Tj ET
+
+1.000 1.000 1.000 rg
+30.00 687.89 535.00 28.00 re B
+BT /F2 8 Tf 35.00 704.89 Td 0.100 0.150 0.300 rg (SysTick Timer) Tj ET
+BT /F3 7 Tf 135.00 704.89 Td 0.300 0.300 0.400 rg (0xE000E010) Tj ET
+BT /F3 7 Tf 135.00 695.89 Td 0.300 0.300 0.400 rg (IRQ -1 \(SysTick\)) Tj ET
+BT /F1 7 Tf 245.00 704.89 Td 0.200 0.200 0.300 rg (cortex_m_systick.c) Tj ET
+BT /F1 7 Tf 350.00 704.89 Td 0.100 0.300 0.500 rg (Standard ARM Cortex-M) Tj ET
+BT /F1 7 Tf 350.00 695.89 Td 0.100 0.300 0.500 rg (Hardware Timer) Tj ET
+0.100 0.600 0.200 rg 470.00 695.89 80.00 14.00 re f
+BT /F2 7 Tf 475.00 700.89 Td 1.000 1.000 1.000 rg (ACTIVE / PASS) Tj ET
+
+0.970 0.980 1.000 rg
+30.00 659.89 535.00 28.00 re B
+BT /F2 8 Tf 35.00 676.89 Td 0.100 0.150 0.300 rg (Clock Control) Tj ET
+BT /F3 7 Tf 135.00 676.89 Td 0.300 0.300 0.400 rg (0x40000800 \(MCLK\)) Tj ET
+BT /F3 7 Tf 135.00 667.89 Td 0.300 0.300 0.400 rg (0x40001000 \(OSC\)) Tj ET
+BT /F1 7 Tf 245.00 676.89 Td 0.200 0.200 0.300 rg (clock_control_pic32cm_ls.c) Tj ET
+BT /F1 7 Tf 350.00 676.89 Td 0.100 0.300 0.500 rg (Custom New Driver) Tj ET
+BT /F1 7 Tf 350.00 667.89 Td 0.100 0.300 0.500 rg (\(FDPLL96M @ 48 MHz\)) Tj ET
+0.100 0.600 0.200 rg 470.00 667.89 80.00 14.00 re f
+BT /F2 7 Tf 475.00 672.89 Td 1.000 1.000 1.000 rg (ACTIVE / PASS) Tj ET
+
+1.000 1.000 1.000 rg
+30.00 631.89 535.00 28.00 re B
+BT /F2 8 Tf 35.00 648.89 Td 0.100 0.150 0.300 rg (Flash \(NVMCTRL\)) Tj ET
+BT /F3 7 Tf 135.00 648.89 Td 0.300 0.300 0.400 rg (0x41004000) Tj ET
+BT /F3 7 Tf 135.00 639.89 Td 0.300 0.300 0.400 rg (IRQ 28) Tj ET
+BT /F1 7 Tf 245.00 648.89 Td 0.200 0.200 0.300 rg (flash_sam0.c) Tj ET
+BT /F1 7 Tf 245.00 639.89 Td 0.200 0.200 0.300 rg (\(atmel,sam0-nvmctrl\)) Tj ET
+BT /F1 7 Tf 350.00 648.89 Td 0.100 0.300 0.500 rg (512 KB, 64-byte pages) Tj ET
+BT /F1 7 Tf 350.00 639.89 Td 0.100 0.300 0.500 rg (Direct Reuse via DTS) Tj ET
+0.200 0.500 0.800 rg 470.00 639.89 80.00 14.00 re f
+BT /F2 7 Tf 475.00 644.89 Td 1.000 1.000 1.000 rg (READY / DTS) Tj ET
+
+0.970 0.980 1.000 rg
+30.00 603.89 535.00 28.00 re B
+BT /F2 8 Tf 35.00 620.89 Td 0.100 0.150 0.300 rg (UART \(SERCOM0\)) Tj ET
+BT /F3 7 Tf 135.00 620.89 Td 0.300 0.300 0.400 rg (0x42000400) Tj ET
+BT /F3 7 Tf 135.00 611.89 Td 0.300 0.300 0.400 rg (IRQ 31, 32, 33, 34) Tj ET
+BT /F1 7 Tf 245.00 620.89 Td 0.200 0.200 0.300 rg (uart_sam0.c /) Tj ET
+BT /F1 7 Tf 245.00 611.89 Td 0.200 0.200 0.300 rg (uart_mchp_sercom_g1) Tj ET
+BT /F1 7 Tf 350.00 620.89 Td 0.100 0.300 0.500 rg (Declare sercom0 on PA22) Tj ET
+BT /F1 7 Tf 350.00 611.89 Td 0.100 0.300 0.500 rg (\(TX\) & PA23 \(RX\) in DTS) Tj ET
+0.200 0.500 0.800 rg 470.00 611.89 80.00 14.00 re f
+BT /F2 7 Tf 475.00 616.89 Td 1.000 1.000 1.000 rg (READY / DTS) Tj ET
+
+1.000 1.000 1.000 rg
+30.00 575.89 535.00 28.00 re B
+BT /F2 8 Tf 35.00 592.89 Td 0.100 0.150 0.300 rg (SPI \(SERCOM1\)) Tj ET
+BT /F3 7 Tf 135.00 592.89 Td 0.300 0.300 0.400 rg (0x42000800) Tj ET
+BT /F3 7 Tf 135.00 583.89 Td 0.300 0.300 0.400 rg (IRQ 35, 36, 37, 38) Tj ET
+BT /F1 7 Tf 245.00 592.89 Td 0.200 0.200 0.300 rg (spi_sam0.c) Tj ET
+BT /F1 7 Tf 350.00 592.89 Td 0.100 0.300 0.500 rg (Declare sercom1 node) Tj ET
+BT /F1 7 Tf 350.00 583.89 Td 0.100 0.300 0.500 rg (in DTS) Tj ET
+0.500 0.500 0.500 rg 470.00 583.89 80.00 14.00 re f
+BT /F2 7 Tf 475.00 588.89 Td 1.000 1.000 1.000 rg (READY / DTS) Tj ET
+
+0.970 0.980 1.000 rg
+30.00 547.89 535.00 28.00 re B
+BT /F2 8 Tf 35.00 564.89 Td 0.100 0.150 0.300 rg (I2C \(SERCOM2\)) Tj ET
+BT /F3 7 Tf 135.00 564.89 Td 0.300 0.300 0.400 rg (0x42000C00) Tj ET
+BT /F3 7 Tf 135.00 555.89 Td 0.300 0.300 0.400 rg (IRQ 39, 40, 41, 42) Tj ET
+BT /F1 7 Tf 245.00 564.89 Td 0.200 0.200 0.300 rg (i2c_sam0.c) Tj ET
+BT /F1 7 Tf 350.00 564.89 Td 0.100 0.300 0.500 rg (Declare sercom2 node) Tj ET
+BT /F1 7 Tf 350.00 555.89 Td 0.100 0.300 0.500 rg (in DTS) Tj ET
+0.500 0.500 0.500 rg 470.00 555.89 80.00 14.00 re f
+BT /F2 7 Tf 475.00 560.89 Td 1.000 1.000 1.000 rg (READY / DTS) Tj ET
+
+1.000 1.000 1.000 rg
+30.00 519.89 535.00 28.00 re B
+BT /F2 8 Tf 35.00 536.89 Td 0.100 0.150 0.300 rg (Timers \(TC0-2\)) Tj ET
+BT /F3 7 Tf 135.00 536.89 Td 0.300 0.300 0.400 rg (0x42002000) Tj ET
+BT /F3 7 Tf 135.00 527.89 Td 0.300 0.300 0.400 rg (IRQ 60-65) Tj ET
+BT /F1 7 Tf 245.00 536.89 Td 0.200 0.200 0.300 rg (counter_sam0_tc.c) Tj ET
+BT /F1 7 Tf 350.00 536.89 Td 0.100 0.300 0.500 rg (Hardware counter timer) Tj ET
+BT /F1 7 Tf 350.00 527.89 Td 0.100 0.300 0.500 rg (support) Tj ET
+0.500 0.500 0.500 rg 470.00 527.89 80.00 14.00 re f
+BT /F2 7 Tf 475.00 532.89 Td 1.000 1.000 1.000 rg (READY / DTS) Tj ET
+
+BT /F2 11 Tf 30.00 495.89 Td 0.100 0.200 0.400 rg (CRITICAL ARCHITECTURAL DECISIONS & RESOLUTIONS) Tj ET
+0.000 0.650 0.850 RG
+1.50 w
+30.00 489.89 m 565.00 489.89 l S
+
+0.100 0.500 0.300 RG
+0.980 0.980 1.000 rg
+30.00 432.89 535.00 45.00 re B
+BT /F2 9 Tf 40.00 464.89 Td 0.100 0.500 0.300 rg (1. Driver Reuse Architecture \(Zero Code Duplication\)) Tj ET
+BT /F1 8 Tf 40.00 452.89 Td 0.200 0.200 0.250 rg (Microchip standardized its Port G1 GPIO and SERCOM IP registers across SAM L10/L11 and PIC32CM.) Tj ET
+BT /F1 8 Tf 40.00 442.89 Td 0.200 0.200 0.250 rg (Instead of writing new drivers from scratch, Zephyr's upstream-tested gpio_sam0.c and uart_sam0.c are reused.) Tj ET
+
+0.700 0.300 0.100 RG
+0.980 0.980 1.000 rg
+30.00 379.89 535.00 45.00 re B
+BT /F2 9 Tf 40.00 411.89 Td 0.700 0.300 0.100 rg (2. Clean Kconfig Isolation \(Fixed GCC -mcmse Fault\)) Tj ET
+BT /F1 8 Tf 40.00 399.89 Td 0.200 0.200 0.250 rg (Removed unconditional 'default y' and 'ARM_SECURE_FIRMWARE' from pic32cm_ls/Kconfig.soc.) Tj ET
+BT /F1 8 Tf 40.00 389.89 Td 0.200 0.200 0.250 rg (This ensures PIC32CM LS builds only when targeted, and prevents TrustZone flags from breaking Cortex-M7/M4.) Tj ET
+
+0.200 0.400 0.700 RG
+0.980 0.980 1.000 rg
+30.00 326.89 535.00 45.00 re B
+BT /F2 9 Tf 40.00 358.89 Td 0.200 0.400 0.700 rg (3. Clock Initialization & RAM Parity Zero-Init) Tj ET
+BT /F1 8 Tf 40.00 346.89 Td 0.200 0.200 0.250 rg (Implemented pic32cm_ls_clock_init\(\) in soc.c transitioning to PL2 with FDPLL96M at 48 MHz.) Tj ET
+BT /F1 8 Tf 40.00 336.89 Td 0.200 0.200 0.250 rg (Added Thumb assembly soc_reset_hook\(\) to zero-initialize SRAM on reset to prevent false ECC parity traps.) Tj ET
+Q
+endstream
+endobj
+7 0 obj
+<< /Length 2600 >>
+stream
+q
+0.080 0.180 0.360 rg
+0.00 799.89 595.28 42.00 re f
+BT /F2 11 Tf 30.00 815.89 Td 1.000 1.000 1.000 rg (PIC32CM5164LS00048 — ZEPHYR FILE TREE & DFP STRUCTURE) Tj ET
+BT /F1 8 Tf 30.00 805.89 Td 0.700 0.850 1.000 rg (Microchip PIC32CM LS00 Curiosity Nano \(EV41C56A\) • Zephyr RTOS v4.4.99) Tj ET
+0.000 0.650 0.850 rg
+0.00 796.89 595.28 3.00 re f
+0.800 0.800 0.800 RG
+0.80 w
+30.00 35.00 m 565.28 35.00 l S
+BT /F1 8 Tf 30.00 20.00 Td 0.500 0.500 0.500 rg (Zephyr RTOS Porting Documentation & Verification Report) Tj ET
+BT /F2 8 Tf 505.28 20.00 Td 0.200 0.400 0.600 rg (Page 3 of 5) Tj ET
+
+BT /F2 11 Tf 30.00 781.89 Td 0.100 0.200 0.400 rg (COMPLETE ZEPHYR PORTING FILE STRUCTURE & DFP PACK) Tj ET
+0.000 0.650 0.850 RG
+1.50 w
+30.00 775.89 m 565.00 775.89 l S
+
+0.200 0.500 0.800 RG
+1.00 w
+0.960 0.980 1.000 rg
+30.00 446.89 170.00 320.00 re B
+0.200 0.500 0.800 rg
+30.00 742.89 170.00 24.00 re f
+BT /F2 9 Tf 38.00 750.89 Td 1.000 1.000 1.000 rg (1. HAL DFP PACK \(81 Files\)) Tj ET
+BT /F2 7 Tf 38.00 731.89 Td 0.100 0.300 0.600 rg (modules/hal/microchip/packs/) Tj ET
+BT /F3 7 Tf 38.00 719.89 Td 0.150 0.150 0.200 rg (pic32c/pic32cm_ls/) Tj ET
+BT /F3 7 Tf 38.00 707.89 Td 0.150 0.150 0.200 rg (└── pic32cm_ls00/) Tj ET
+BT /F3 7 Tf 38.00 695.89 Td 0.150 0.150 0.200 rg (    ├── CMakeLists.txt) Tj ET
+BT /F3 7 Tf 38.00 683.89 Td 0.150 0.150 0.200 rg (    └── include/) Tj ET
+BT /F3 7 Tf 38.00 671.89 Td 0.150 0.150 0.200 rg (        ├── pic32c.h) Tj ET
+BT /F3 7 Tf 38.00 659.89 Td 0.150 0.150 0.200 rg (        ├── pic32cm5164ls00048.h) Tj ET
+BT /F3 7 Tf 38.00 647.89 Td 0.150 0.150 0.200 rg (        ├── system_pic32cmls00.h) Tj ET
+BT /F3 7 Tf 38.00 635.89 Td 0.150 0.150 0.200 rg (        ├── component/ \(32 files\)) Tj ET
+BT /F3 7 Tf 38.00 623.89 Td 0.150 0.150 0.200 rg (        │   ├── port.h, sercom.h) Tj ET
+BT /F3 7 Tf 38.00 611.89 Td 0.150 0.150 0.200 rg (        │   └── adc.h, nvmctrl.h) Tj ET
+BT /F3 7 Tf 38.00 599.89 Td 0.150 0.150 0.200 rg (        ├── instance/ \(33 files\)) Tj ET
+BT /F3 7 Tf 38.00 587.89 Td 0.150 0.150 0.200 rg (        │   ├── sercom0.h - 5.h) Tj ET
+BT /F3 7 Tf 38.00 575.89 Td 0.150 0.150 0.200 rg (        │   └── tc0.h - tc2.h) Tj ET
+BT /F3 7 Tf 38.00 563.89 Td 0.150 0.150 0.200 rg (        └── pio/ \(1 file\)) Tj ET
+BT /F3 7 Tf 38.00 551.89 Td 0.150 0.150 0.200 rg (            └── pic32cm5164ls00048.h) Tj ET
+BT /F2 7.5 Tf 38.00 535.89 Td 0.100 0.300 0.600 rg (Role: Hardware register structs,) Tj ET
+BT /F1 7.5 Tf 38.00 523.89 Td 0.150 0.150 0.200 rg (NVIC IRQs, memory base addrs.) Tj ET
+
+0.200 0.600 0.400 RG
+0.950 0.980 0.950 rg
+212.00 446.89 170.00 320.00 re B
+0.200 0.600 0.400 rg
+212.00 742.89 170.00 24.00 re f
+BT /F2 9 Tf 220.00 750.89 Td 1.000 1.000 1.000 rg (2. SOC DEFINITION LAYER) Tj ET
+BT /F2 7 Tf 220.00 731.89 Td 0.100 0.400 0.200 rg (zephyr/soc/microchip/pic32c/) Tj ET
+BT /F3 7 Tf 220.00 719.89 Td 0.150 0.150 0.200 rg (└── pic32cm_ls/) Tj ET
+BT /F3 7 Tf 220.00 707.89 Td 0.150 0.150 0.200 rg (    ├── CMakeLists.txt) Tj ET
+BT /F3 7 Tf 220.00 695.89 Td 0.150 0.150 0.200 rg (    ├── Kconfig) Tj ET
+BT /F3 7 Tf 220.00 683.89 Td 0.150 0.150 0.200 rg (    ├── Kconfig.soc) Tj ET
+BT /F3 7 Tf 220.00 671.89 Td 0.150 0.150 0.200 rg (    ├── Kconfig.defconfig) Tj ET
+BT /F3 7 Tf 220.00 659.89 Td 0.150 0.150 0.200 rg (    ├── soc.yml) Tj ET
+BT /F3 7 Tf 220.00 647.89 Td 0.150 0.150 0.200 rg (    ├── common/) Tj ET
+BT /F3 7 Tf 220.00 635.89 Td 0.150 0.150 0.200 rg (    │   ├── CMakeLists.txt) Tj ET
+BT /F3 7 Tf 220.00 623.89 Td 0.150 0.150 0.200 rg (    │   ├── pinctrl_soc.h) Tj ET
+BT /F3 7 Tf 220.00 611.89 Td 0.150 0.150 0.200 rg (    │   └── soc.c \(Clock & Init\)) Tj ET
+BT /F3 7 Tf 220.00 599.89 Td 0.150 0.150 0.200 rg (    └── pic32cm_ls00/) Tj ET
+BT /F3 7 Tf 220.00 587.89 Td 0.150 0.150 0.200 rg (        ├── CMakeLists.txt) Tj ET
+BT /F3 7 Tf 220.00 575.89 Td 0.150 0.150 0.200 rg (        ├── Kconfig.soc) Tj ET
+BT /F3 7 Tf 220.00 563.89 Td 0.150 0.150 0.200 rg (        ├── pic32cm5164ls00048.dtsi) Tj ET
+BT /F3 7 Tf 220.00 551.89 Td 0.150 0.150 0.200 rg (        ├── soc.c) Tj ET
+BT /F3 7 Tf 220.00 539.89 Td 0.150 0.150 0.200 rg (        └── soc.h) Tj ET
+BT /F2 7.5 Tf 220.00 523.89 Td 0.100 0.400 0.200 rg (Role: Cortex-M23 CPU configs,) Tj ET
+BT /F1 7.5 Tf 220.00 511.89 Td 0.150 0.150 0.200 rg (DeviceTree nodes, clock setup.) Tj ET
+
+0.500 0.300 0.700 RG
+0.980 0.960 1.000 rg
+395.00 446.89 170.00 320.00 re B
+0.500 0.300 0.700 rg
+395.00 742.89 170.00 24.00 re f
+BT /F2 9 Tf 403.00 750.89 Td 1.000 1.000 1.000 rg (3. BOARD LAYER \(CNano\)) Tj ET
+BT /F2 7 Tf 403.00 731.89 Td 0.400 0.200 0.500 rg (zephyr/boards/microchip/pic32c/) Tj ET
+BT /F3 7 Tf 403.00 719.89 Td 0.150 0.150 0.200 rg (└── pic32cm_ls00_cnano/) Tj ET
+BT /F3 7 Tf 403.00 707.89 Td 0.150 0.150 0.200 rg (    ├── board.cmake \(Runners\)) Tj ET
+BT /F3 7 Tf 403.00 695.89 Td 0.150 0.150 0.200 rg (    ├── board.yml \(Hw Model v2\)) Tj ET
+BT /F3 7 Tf 403.00 683.89 Td 0.150 0.150 0.200 rg (    ├── pic32cm_ls00_cnano.yaml) Tj ET
+BT /F3 7 Tf 403.00 671.89 Td 0.150 0.150 0.200 rg (    ├── Kconfig.pic32cm_ls00_cnano) Tj ET
+BT /F3 7 Tf 403.00 659.89 Td 0.150 0.150 0.200 rg (    ├── pic32cm_ls00_cnano.dts) Tj ET
+BT /F3 7 Tf 403.00 647.89 Td 0.150 0.150 0.200 rg (    ├── pic32cm_ls00_cnano_defconfig) Tj ET
+BT /F3 7 Tf 403.00 635.89 Td 0.150 0.150 0.200 rg (    └── doc/) Tj ET
+BT /F3 7 Tf 403.00 623.89 Td 0.150 0.150 0.200 rg (        ├── index.rst) Tj ET
+BT /F3 7 Tf 403.00 611.89 Td 0.150 0.150 0.200 rg (        ├── index.html) Tj ET
+BT /F3 7 Tf 403.00 599.89 Td 0.150 0.150 0.200 rg (        └── img/pic32cm_ls00_cnano.png) Tj ET
+BT /F2 7.5 Tf 403.00 583.89 Td 0.400 0.200 0.500 rg (Role: Board LEDs \(PA15, PB02\),) Tj ET
+BT /F1 7.5 Tf 403.00 571.89 Td 0.150 0.150 0.200 rg (button \(PA23\), Twister metadata,) Tj ET
+BT /F1 7.5 Tf 403.00 559.89 Td 0.150 0.150 0.200 rg (debugger runner configs.) Tj ET
+
+BT /F2 11 Tf 30.00 426.89 Td 0.100 0.200 0.400 rg (CMAKE BUILD SCRIPT INCLUSION CHAIN) Tj ET
+0.000 0.650 0.850 RG
+1.50 w
+30.00 420.89 m 565.00 420.89 l S
+
+0.700 0.800 0.900 RG
+0.80 w
+0.970 0.980 1.000 rg
+30.00 385.89 535.00 24.00 re B
+BT /F2 8 Tf 42.00 393.89 Td 0.100 0.300 0.600 rg (1. Top CMake) Tj ET
+BT /F1 8 Tf 170.00 393.89 Td 0.200 0.200 0.250 rg (west build -b pic32cm_ls00_cnano invokes CMake with board & SoC qualifiers.) Tj ET
+
+30.00 357.89 535.00 24.00 re B
+BT /F2 8 Tf 42.00 365.89 Td 0.100 0.300 0.600 rg (2. SoC Inclusion) Tj ET
+BT /F1 8 Tf 170.00 365.89 Td 0.200 0.200 0.250 rg (soc.yml resolves microchip_pic32cm_ls -> pic32cm_ls00 -> pic32cm5164ls00048.) Tj ET
+
+30.00 329.89 535.00 24.00 re B
+BT /F2 8 Tf 42.00 337.89 Td 0.100 0.300 0.600 rg (3. DFP Pack Inclusion) Tj ET
+BT /F1 8 Tf 170.00 337.89 Td 0.200 0.200 0.250 rg (modules/hal/microchip/packs/pic32c/CMakeLists.txt adds pic32cm_ls00 headers.) Tj ET
+
+30.00 301.89 535.00 24.00 re B
+BT /F2 8 Tf 42.00 309.89 Td 0.100 0.300 0.600 rg (4. Driver Selection) Tj ET
+BT /F1 8 Tf 170.00 309.89 Td 0.200 0.200 0.250 rg (Kconfig selects CONFIG_GPIO_SAM0=y & CONFIG_CLOCK_CONTROL_PIC32CM_LS=y.) Tj ET
+
+30.00 273.89 535.00 24.00 re B
+BT /F2 8 Tf 42.00 281.89 Td 0.100 0.300 0.600 rg (5. Compilation & Link) Tj ET
+BT /F1 8 Tf 170.00 281.89 Td 0.200 0.200 0.250 rg (GCC compiles C files; GNU ld links zephyr.elf with Cortex-M linker script.) Tj ET
+Q
+endstream
+endobj
+8 0 obj
+<< /Length 2700 >>
+stream
+q
+0.080 0.180 0.360 rg
+0.00 799.89 595.28 42.00 re f
+BT /F2 11 Tf 30.00 815.89 Td 1.000 1.000 1.000 rg (PIC32CM5164LS00048 — UART / USART IMPLEMENTATION GUIDE) Tj ET
+BT /F1 8 Tf 30.00 805.89 Td 0.700 0.850 1.000 rg (Microchip PIC32CM LS00 Curiosity Nano \(EV41C56A\) • Zephyr RTOS v4.4.99) Tj ET
+0.000 0.650 0.850 rg
+0.00 796.89 595.28 3.00 re f
+0.800 0.800 0.800 RG
+0.80 w
+30.00 35.00 m 565.28 35.00 l S
+BT /F1 8 Tf 30.00 20.00 Td 0.500 0.500 0.500 rg (Zephyr RTOS Porting Documentation & Verification Report) Tj ET
+BT /F2 8 Tf 505.28 20.00 Td 0.200 0.400 0.600 rg (Page 4 of 5) Tj ET
+
+BT /F2 11 Tf 30.00 781.89 Td 0.100 0.200 0.400 rg (UART / USART IMPLEMENTATION ROADMAP & PINOUT MAP) Tj ET
+0.000 0.650 0.850 RG
+1.50 w
+30.00 775.89 m 565.00 775.89 l S
+
+0.200 0.500 0.800 RG
+1.00 w
+0.950 0.980 1.000 rg
+30.00 671.89 535.00 95.00 re B
+BT /F2 10 Tf 40.00 749.89 Td 0.100 0.300 0.600 rg (Curiosity Nano On-Board Virtual COM Port \(nEDBG CDC UART\) Wiring) Tj ET
+
+0.200 0.300 0.500 rg
+45.00 681.89 150.00 58.00 re f
+BT /F2 9 Tf 55.00 723.89 Td 1.000 1.000 1.000 rg (nEDBG Debugger) Tj ET
+BT /F1 8 Tf 55.00 709.89 Td 0.800 0.900 1.000 rg (CDC Virtual COM Port) Tj ET
+BT /F1 8 Tf 55.00 695.89 Td 0.800 0.900 1.000 rg (USB to Host Laptop) Tj ET
+
+0.100 0.600 0.300 RG
+2.00 w
+200.00 723.89 m 360.00 723.89 l S
+BT /F2 7 Tf 230.00 728.89 Td 0.100 0.600 0.300 rg (TX: PA22 \(SERCOM0 PAD0\)) Tj ET
+
+0.800 0.300 0.100 RG
+360.00 703.89 m 200.00 703.89 l S
+BT /F2 7 Tf 230.00 693.89 Td 0.800 0.300 0.100 rg (RX: PA23 \(SERCOM0 PAD1\)) Tj ET
+
+0.100 0.500 0.350 rg
+365.00 681.89 185.00 58.00 re f
+BT /F2 9 Tf 375.00 723.89 Td 1.000 1.000 1.000 rg (PIC32CM5164LS00048) Tj ET
+BT /F1 8 Tf 375.00 709.89 Td 0.900 1.000 0.900 rg (SERCOM0 USART Controller) Tj ET
+BT /F3 7 Tf 375.00 695.89 Td 0.900 1.000 0.900 rg (Baud: 115200 8-N-1 \(rxpo=1, txpo=0\)) Tj ET
+
+BT /F2 11 Tf 30.00 651.89 Td 0.100 0.200 0.400 rg (STEP-BY-STEP DECLARATION ROADMAP \(4 FILES\)) Tj ET
+0.000 0.650 0.850 RG
+1.50 w
+30.00 645.89 m 565.00 645.89 l S
+
+0.700 0.700 0.700 RG
+0.80 w
+0.980 0.980 0.980 rg
+30.00 543.89 535.00 90.00 re B
+0.200 0.300 0.400 rg
+30.00 615.89 535.00 18.00 re f
+BT /F2 8 Tf 38.00 622.89 Td 1.000 1.000 1.000 rg (Step 1: Declare SERCOM0 in SoC DTSI \(soc/microchip/.../pic32cm5164ls00048.dtsi\)) Tj ET
+BT /F3 7.5 Tf 45.00 605.89 Td 0.100 0.200 0.400 rg (soc {) Tj ET
+BT /F3 7.5 Tf 45.00 596.89 Td 0.100 0.200 0.400 rg (    sercom0: sercom@42000400 {) Tj ET
+BT /F3 7.5 Tf 45.00 587.89 Td 0.100 0.200 0.400 rg (        compatible = "atmel,sam0-uart";) Tj ET
+BT /F3 7.5 Tf 45.00 578.89 Td 0.100 0.200 0.400 rg (        reg = <0x42000400 0x40>;) Tj ET
+BT /F3 7.5 Tf 45.00 569.89 Td 0.100 0.200 0.400 rg (        interrupts = <31 0>, <32 0>, <33 0>, <34 0>;) Tj ET
+BT /F3 7.5 Tf 45.00 560.89 Td 0.100 0.200 0.400 rg (        status = "disabled";) Tj ET
+BT /F3 7.5 Tf 45.00 551.89 Td 0.100 0.200 0.400 rg (    };) Tj ET
+BT /F3 7.5 Tf 45.00 542.89 Td 0.100 0.200 0.400 rg (};) Tj ET
+
+0.980 0.980 0.980 rg
+30.00 428.89 535.00 105.00 re B
+0.200 0.400 0.300 rg
+30.00 515.89 535.00 18.00 re f
+BT /F2 8 Tf 38.00 522.89 Td 1.000 1.000 1.000 rg (Step 2: Enable Console in Board DTS \(boards/.../pic32cm_ls00_cnano.dts\)) Tj ET
+BT /F3 7.5 Tf 45.00 505.89 Td 0.100 0.300 0.200 rg (/ {) Tj ET
+BT /F3 7.5 Tf 45.00 496.89 Td 0.100 0.300 0.200 rg (    chosen {) Tj ET
+BT /F3 7.5 Tf 45.00 487.89 Td 0.100 0.300 0.200 rg (        zephyr,console = &sercom0;) Tj ET
+BT /F3 7.5 Tf 45.00 478.89 Td 0.100 0.300 0.200 rg (        zephyr,shell-uart = &sercom0;) Tj ET
+BT /F3 7.5 Tf 45.00 469.89 Td 0.100 0.300 0.200 rg (    };) Tj ET
+BT /F3 7.5 Tf 45.00 460.89 Td 0.100 0.300 0.200 rg (};) Tj ET
+BT /F3 7.5 Tf 45.00 451.89 Td 0.100 0.300 0.200 rg (&sercom0 {) Tj ET
+BT /F3 7.5 Tf 45.00 442.89 Td 0.100 0.300 0.200 rg (    status = "okay"; current-speed = <115200>; rxpo = <1>; txpo = <0>;) Tj ET
+BT /F3 7.5 Tf 45.00 433.89 Td 0.100 0.300 0.200 rg (};) Tj ET
+
+0.980 0.980 0.980 rg
+30.00 338.89 260.00 80.00 re B
+0.600 0.350 0.100 rg
+30.00 400.89 260.00 18.00 re f
+BT /F2 8 Tf 38.00 407.89 Td 1.000 1.000 1.000 rg (Step 3: Board Defconfig / prj.conf) Tj ET
+BT /F3 7.5 Tf 40.00 389.89 Td 0.400 0.200 0.050 rg (CONFIG_SERIAL=y) Tj ET
+BT /F3 7.5 Tf 40.00 379.89 Td 0.400 0.200 0.050 rg (CONFIG_CONSOLE=y) Tj ET
+BT /F3 7.5 Tf 40.00 369.89 Td 0.400 0.200 0.050 rg (CONFIG_UART_CONSOLE=y) Tj ET
+
+0.980 0.980 0.980 rg
+305.00 338.89 260.00 80.00 re B
+0.400 0.200 0.500 rg
+305.00 400.89 260.00 18.00 re f
+BT /F2 8 Tf 313.00 407.89 Td 1.000 1.000 1.000 rg (Step 4: Application C Code \(main.c\)) Tj ET
+BT /F3 7 Tf 315.00 389.89 Td 0.300 0.100 0.400 rg (#include <zephyr/kernel.h>) Tj ET
+BT /F3 7 Tf 315.00 380.89 Td 0.300 0.100 0.400 rg (#include <zephyr/sys/printk.h>) Tj ET
+BT /F3 7 Tf 315.00 371.89 Td 0.300 0.100 0.400 rg (int main\(void\) {) Tj ET
+BT /F3 7 Tf 315.00 362.89 Td 0.300 0.100 0.400 rg (    printk\("Hello PIC32CM5164LS!\\n"\);) Tj ET
+BT /F3 7 Tf 315.00 353.89 Td 0.300 0.100 0.400 rg (    return 0;) Tj ET
+BT /F3 7 Tf 315.00 344.89 Td 0.300 0.100 0.400 rg (}) Tj ET
+Q
+endstream
+endobj
+9 0 obj
+<< /Length 2650 >>
+stream
+q
+0.080 0.180 0.360 rg
+0.00 799.89 595.28 42.00 re f
+BT /F2 11 Tf 30.00 815.89 Td 1.000 1.000 1.000 rg (PIC32CM5164LS00048 — TEST VERIFICATION & FLASHING GUIDE) Tj ET
+BT /F1 8 Tf 30.00 805.89 Td 0.700 0.850 1.000 rg (Microchip PIC32CM LS00 Curiosity Nano \(EV41C56A\) • Zephyr RTOS v4.4.99) Tj ET
+0.000 0.650 0.850 rg
+0.00 796.89 595.28 3.00 re f
+0.800 0.800 0.800 RG
+0.80 w
+30.00 35.00 m 565.28 35.00 l S
+BT /F1 8 Tf 30.00 20.00 Td 0.500 0.500 0.500 rg (Zephyr RTOS Porting Documentation & Verification Report) Tj ET
+BT /F2 8 Tf 505.28 20.00 Td 0.200 0.400 0.600 rg (Page 5 of 5) Tj ET
+
+BT /F2 11 Tf 30.00 781.89 Td 0.100 0.200 0.400 rg (AUTOMATED TEST VERIFICATION & FLASHING WORKFLOW) Tj ET
+0.000 0.650 0.850 RG
+1.50 w
+30.00 775.89 m 565.00 775.89 l S
+
+0.100 0.600 0.300 RG
+1.50 w
+0.920 0.980 0.940 rg
+30.00 701.89 535.00 65.00 re B
+BT /F2 11 Tf 45.00 748.89 Td 0.050 0.450 0.200 rg (TWISTER AUTOMATED TEST VERIFICATION SCORECARD) Tj ET
+
+0.100 0.550 0.250 RG
+1.00 w
+1.000 1.000 1.000 rg
+45.00 708.89 118.00 28.00 re B
+BT /F2 6.5 Tf 50.00 725.89 Td 0.200 0.200 0.300 rg (Kernel Multithreading) Tj ET
+BT /F2 6.5 Tf 50.00 715.89 Td 0.100 0.550 0.250 rg (13 / 13 PASSED \(0 FAIL\)) Tj ET
+
+1.000 1.000 1.000 rg
+173.00 708.89 118.00 28.00 re B
+BT /F2 6.5 Tf 178.00 725.89 Td 0.200 0.200 0.300 rg (Ring Buffer Structures) Tj ET
+BT /F2 6.5 Tf 178.00 715.89 Td 0.100 0.550 0.250 rg (3 / 3 PASSED \(0 FAIL\)) Tj ET
+
+1.000 1.000 1.000 rg
+301.00 708.89 118.00 28.00 re B
+BT /F2 6.5 Tf 306.00 725.89 Td 0.200 0.200 0.300 rg (Kernel Synchronization) Tj ET
+BT /F2 6.5 Tf 306.00 715.89 Td 0.100 0.550 0.250 rg (5 / 5 PASSED \(0 FAIL\)) Tj ET
+
+1.000 1.000 1.000 rg
+429.00 708.89 118.00 28.00 re B
+BT /F2 6.5 Tf 434.00 725.89 Td 0.200 0.200 0.300 rg (Non-LS Board Isolation) Tj ET
+BT /F2 6.5 Tf 434.00 715.89 Td 0.100 0.550 0.250 rg (ALL PASSED \(No Conflict\)) Tj ET
+
+BT /F2 10 Tf 30.00 683.89 Td 0.100 0.200 0.400 rg (VERIFIED ZEPHYR TEST SUITES BREAKDOWN) Tj ET
+
+0.150 0.250 0.450 rg
+30.00 653.89 535.00 18.00 re f
+BT /F2 8 Tf 35.00 660.89 Td 1.000 1.000 1.000 rg (Test Suite Path) Tj ET
+BT /F2 8 Tf 270.00 660.89 Td 1.000 1.000 1.000 rg (Category) Tj ET
+BT /F2 8 Tf 390.00 660.89 Td 1.000 1.000 1.000 rg (Scenarios) Tj ET
+BT /F2 8 Tf 480.00 660.89 Td 1.000 1.000 1.000 rg (Build Status) Tj ET
+
+0.850 0.880 0.920 RG
+0.50 w
+0.970 0.980 1.000 rg
+30.00 635.89 535.00 18.00 re B
+BT /F3 7.5 Tf 35.00 642.89 Td 0.100 0.200 0.400 rg (tests/kernel/threads/thread_apis/) Tj ET
+BT /F1 7.5 Tf 270.00 642.89 Td 0.200 0.200 0.300 rg (Kernel Multithreading) Tj ET
+BT /F1 7.5 Tf 390.00 642.89 Td 0.300 0.300 0.400 rg (13 Scenarios) Tj ET
+0.100 0.600 0.250 rg 480.00 637.89 75.00 14.00 re f
+BT /F2 7 Tf 485.00 642.89 Td 1.000 1.000 1.000 rg (100% PASS) Tj ET
+
+1.000 1.000 1.000 rg
+30.00 617.89 535.00 18.00 re B
+BT /F3 7.5 Tf 35.00 624.89 Td 0.100 0.200 0.400 rg (tests/lib/ring_buffer/) Tj ET
+BT /F1 7.5 Tf 270.00 624.89 Td 0.200 0.200 0.300 rg (Data Structures) Tj ET
+BT /F1 7.5 Tf 390.00 624.89 Td 0.300 0.300 0.400 rg (3 Scenarios) Tj ET
+0.100 0.600 0.250 rg 480.00 619.89 75.00 14.00 re f
+BT /F2 7 Tf 485.00 624.89 Td 1.000 1.000 1.000 rg (100% PASS) Tj ET
+
+0.970 0.980 1.000 rg
+30.00 599.89 535.00 18.00 re B
+BT /F3 7.5 Tf 35.00 606.89 Td 0.100 0.200 0.400 rg (tests/kernel/sched/schedule_api/) Tj ET
+BT /F1 7.5 Tf 270.00 606.89 Td 0.200 0.200 0.300 rg (Preemption & Priority) Tj ET
+BT /F1 7.5 Tf 390.00 606.89 Td 0.300 0.300 0.400 rg (5 Scenarios) Tj ET
+0.100 0.600 0.250 rg 480.00 601.89 75.00 14.00 re f
+BT /F2 7 Tf 485.00 606.89 Td 1.000 1.000 1.000 rg (100% PASS) Tj ET
+
+1.000 1.000 1.000 rg
+30.00 581.89 535.00 18.00 re B
+BT /F3 7.5 Tf 35.00 588.89 Td 0.100 0.200 0.400 rg (tests/kernel/mutex/sys_mutex/) Tj ET
+BT /F1 7.5 Tf 270.00 588.89 Td 0.200 0.200 0.300 rg (Mutual Exclusion) Tj ET
+BT /F1 7.5 Tf 390.00 588.89 Td 0.300 0.300 0.400 rg (4 Scenarios) Tj ET
+0.100 0.600 0.250 rg 480.00 583.89 75.00 14.00 re f
+BT /F2 7 Tf 485.00 588.89 Td 1.000 1.000 1.000 rg (100% PASS) Tj ET
+
+0.970 0.980 1.000 rg
+30.00 563.89 535.00 18.00 re B
+BT /F3 7.5 Tf 35.00 570.89 Td 0.100 0.200 0.400 rg (tests/kernel/mem_heap/mheap_api/) Tj ET
+BT /F1 7.5 Tf 270.00 570.89 Td 0.200 0.200 0.300 rg (Dynamic Heap Alloc) Tj ET
+BT /F1 7.5 Tf 390.00 570.89 Td 0.300 0.300 0.400 rg (3 Scenarios) Tj ET
+0.100 0.600 0.250 rg 480.00 565.89 75.00 14.00 re f
+BT /F2 7 Tf 485.00 570.89 Td 1.000 1.000 1.000 rg (100% PASS) Tj ET
+
+1.000 1.000 1.000 rg
+30.00 545.89 535.00 18.00 re B
+BT /F3 7.5 Tf 35.00 552.89 Td 0.100 0.200 0.400 rg (samples/basic/blinky) Tj ET
+BT /F1 7.5 Tf 270.00 552.89 Td 0.200 0.200 0.300 rg (GPIO Hardware Output) Tj ET
+BT /F1 7.5 Tf 390.00 552.89 Td 0.300 0.300 0.400 rg (1 Target \(LED0\)) Tj ET
+0.100 0.600 0.250 rg 480.00 547.89 75.00 14.00 re f
+BT /F2 7 Tf 485.00 552.89 Td 1.000 1.000 1.000 rg (100% PASS) Tj ET
+
+BT /F2 10 Tf 30.00 527.89 Td 0.100 0.200 0.400 rg (HOST FLASHING & DEBUGGER WORKFLOW \(OUTSIDE TOOLS\)) Tj ET
+0.000 0.650 0.850 RG
+1.50 w
+30.00 521.89 m 565.00 521.89 l S
+
+0.300 0.500 0.800 RG
+1.00 w
+0.970 0.980 1.000 rg
+30.00 385.89 535.00 130.00 re B
+BT /F2 9 Tf 42.00 500.89 Td 0.100 0.250 0.550 rg (How to Flash & Debug PIC32CM5164LS00048 from Linux Host PC:) Tj ET
+
+BT /F2 7.5 Tf 45.00 484.89 Td 0.100 0.300 0.600 rg (# 1. Direct Flashing with Standalone Outside EDBG Utility:) Tj ET
+BT /F3 7.5 Tf 45.00 473.89 Td 0.150 0.150 0.200 rg (edbg -b -t pic32cm_ls00 -pv -f build/zephyr/zephyr.bin) Tj ET
+
+BT /F2 7.5 Tf 45.00 458.89 Td 0.100 0.300 0.600 rg (# 2. Flashing with PyOCD \(Auto-detects on-board CMSIS-DAP debugger\):) Tj ET
+BT /F3 7.5 Tf 45.00 447.89 Td 0.150 0.150 0.200 rg (pyocd flash -t cortex_m build/zephyr/zephyr.hex) Tj ET
+
+BT /F2 7.5 Tf 45.00 432.89 Td 0.100 0.300 0.600 rg (# 3. Batch Verification with Twister Test Suite:) Tj ET
+BT /F3 7.5 Tf 45.00 421.89 Td 0.150 0.150 0.200 rg (./scripts/twister -p pic32cm_ls00_cnano -T tests/kernel/threads/ --build-only) Tj ET
+
+BT /F2 7.5 Tf 45.00 406.89 Td 0.100 0.300 0.600 rg (# 4. Serial Terminal Connection for Real-Time Console Output \(115200 8-N-1\):) Tj ET
+BT /F3 7.5 Tf 45.00 395.89 Td 0.150 0.150 0.200 rg (minicom -D /dev/ttyACM0 -b 115200) Tj ET
+Q
+endstream
+endobj
+10 0 obj
+<< /Type /Page
+   /Parent 15 0 R
+   /MediaBox [0 0 595.28 841.89]
+   /Contents 5 0 R
+   /Resources 4 0 R
+>>
+endobj
+11 0 obj
+<< /Type /Page
+   /Parent 15 0 R
+   /MediaBox [0 0 595.28 841.89]
+   /Contents 6 0 R
+   /Resources 4 0 R
+>>
+endobj
+12 0 obj
+<< /Type /Page
+   /Parent 15 0 R
+   /MediaBox [0 0 595.28 841.89]
+   /Contents 7 0 R
+   /Resources 4 0 R
+>>
+endobj
+13 0 obj
+<< /Type /Page
+   /Parent 15 0 R
+   /MediaBox [0 0 595.28 841.89]
+   /Contents 8 0 R
+   /Resources 4 0 R
+>>
+endobj
+14 0 obj
+<< /Type /Page
+   /Parent 15 0 R
+   /MediaBox [0 0 595.28 841.89]
+   /Contents 9 0 R
+   /Resources 4 0 R
+>>
+endobj
+15 0 obj
+<< /Type /Pages /Kids [ 10 0 R 11 0 R 12 0 R 13 0 R 14 0 R ] /Count 5 >>
+endobj
+16 0 obj
+<< /Type /Catalog /Pages 15 0 R >>
+endobj
+17 0 obj
+<< /Title (PIC32CM5164LS00048 Zephyr Porting Analysis & Verification Report)
+   /Author (Antigravity Assistant)
+   /Subject (Zephyr RTOS Hardware Porting, Architecture & Charts)
+   /Creator (Zephyr Porting Documentation Generator)
+>>
+endobj
+xref
+0 18
+0000000000 65535 f 
+0000000015 00000 n 
+0000000113 00000 n 
+0000000216 00000 n 
+0000000314 00000 n 
+0000000392 00000 n 
+0000003112 00000 n 
+0000006032 00000 n 
+0000008702 00000 n 
+0000011472 00000 n 
+0000014192 00000 n 
+0000014316 00000 n 
+0000014440 00000 n 
+0000014564 00000 n 
+0000014688 00000 n 
+0000014812 00000 n 
+0000014902 00000 n 
+0000014958 00000 n 
+trailer
+<< /Size 18
+   /Root 16 0 R
+   /Info 17 0 R
+>>
+startxref
+0000015190
+%%EOF

@@ -1,0 +1,31 @@
+# Copyright (c) 2026 Microchip Technology Inc.
+# SPDX-License-Identifier: Apache-2.0
+
+if SOC_SERIES_PIC32CM_LS00
+
+config SOC_SERIES
+	default "pic32cm_ls00"
+
+config SOC
+	default "pic32cm5164ls00048" if SOC_PIC32CM5164LS00048
+
+config SYS_CLOCK_HW_CYCLES_PER_SEC
+	default $(dt_node_int_prop_int,/cpus/cpu@0,clock-frequency)
+
+
+config CORTEX_M_SYSTICK
+	default y
+
+config SYSTEM_TIMER_HAS_LPM_COMPANION_SUPPORT
+	default y
+
+config CORTEX_M_SYSTICK_LPM_TIMER_NONE
+	default y
+
+config NUM_IRQS
+	default 71
+
+config CPU_HAS_ARM_MPU
+	default y
+
+endif # SOC_SERIES_PIC32CM_LS00
