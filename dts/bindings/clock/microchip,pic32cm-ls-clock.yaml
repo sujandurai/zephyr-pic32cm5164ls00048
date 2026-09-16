@@ -1,0 +1,17 @@
+# Copyright (c) 2026 Microchip Technology Inc.
+# SPDX-License-Identifier: Apache-2.0
+
+description: Microchip PIC32CM LS clock controller
+
+compatible: "microchip,pic32cm-ls-clock"
+
+include: [clock-controller.yaml, base.yaml]
+
+properties:
+  reg:
+    required: true
+  "#clock-cells":
+    const: 1
+
+clock-cells:
+  - subsystem

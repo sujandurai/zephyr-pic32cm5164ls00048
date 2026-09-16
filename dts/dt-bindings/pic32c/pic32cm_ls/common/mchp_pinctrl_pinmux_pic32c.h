@@ -4,61 +4,116 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-#ifndef ZEPHYR_DTS_BINDINGS_PIC32C_PIC32CM_LS_COMMON_MCHP_PINCTRL_PINMUX_PIC32C_H
-#define ZEPHYR_DTS_BINDINGS_PIC32C_PIC32CM_LS_COMMON_MCHP_PINCTRL_PINMUX_PIC32C_H
+#ifndef INCLUDE_DT_BINDINGS_PIC32CM_LS_COMMON_MCHP_PINCTRL_PINMUX_PIC32C_H_
+#define INCLUDE_DT_BINDINGS_PIC32CM_LS_COMMON_MCHP_PINCTRL_PINMUX_PIC32C_H_
 
-#define MCHP_PINMUX(pin, mux) \
-	(((pin) << 16) | (mux))
+/** PORT */
+#define MCHP_PINMUX_PORT_a 0U
+#define MCHP_PINMUX_PORT_b 1U
 
-/* Peripheral mux values */
-#define MCHP_PINMUX_FUNC_A	0
-#define MCHP_PINMUX_FUNC_B	1
-#define MCHP_PINMUX_FUNC_C	2
-#define MCHP_PINMUX_FUNC_D	3
-#define MCHP_PINMUX_FUNC_E	4
-#define MCHP_PINMUX_FUNC_F	5
-#define MCHP_PINMUX_FUNC_G	6
-#define MCHP_PINMUX_FUNC_H	7
-#define MCHP_PINMUX_FUNC_I	8
-#define MCHP_PINMUX_FUNC_K	10
-#define MCHP_PINMUX_FUNC_P	15
+/** GPIO */
+#define MCHP_PINMUX_PERIPH_gpio 0U
 
-/* Pin definitions */
-#define MCHP_PIN_PA04	4
-#define MCHP_PIN_PA05	5
-#define MCHP_PIN_PA08	8
-#define MCHP_PIN_PA09	9
-#define MCHP_PIN_PA16	16
-#define MCHP_PIN_PA17	17
-#define MCHP_PIN_PB03	35
+/** Peripherals */
+#define MCHP_PINMUX_PERIPH_a 0U
+#define MCHP_PINMUX_PERIPH_b 1U
+#define MCHP_PINMUX_PERIPH_c 2U
+#define MCHP_PINMUX_PERIPH_d 3U
+#define MCHP_PINMUX_PERIPH_e 4U
+#define MCHP_PINMUX_PERIPH_f 5U
+#define MCHP_PINMUX_PERIPH_g 6U
+#define MCHP_PINMUX_PERIPH_h 7U
+#define MCHP_PINMUX_PERIPH_i 8U
+#define MCHP_PINMUX_PERIPH_j 9U
+#define MCHP_PINMUX_PERIPH_k 10U
+#define MCHP_PINMUX_PERIPH_p 15U
 
-/* SERCOM0 */
-#define MCHP_PINMUX_PA04_SERCOM0_PAD0 \
-	MCHP_PINMUX(MCHP_PIN_PA04, MCHP_PINMUX_FUNC_D)
+/** Extra */
+#define MCHP_PINMUX_PERIPH_x 0U
 
-#define MCHP_PINMUX_PA05_SERCOM0_PAD1 \
-	MCHP_PINMUX(MCHP_PIN_PA05, MCHP_PINMUX_FUNC_D)
+/** System */
+#define MCHP_PINMUX_PERIPH_s 0U
 
-#define MCHP_PINMUX_PA08_SERCOM0_PAD0 \
-	MCHP_PINMUX(MCHP_PIN_PA08, MCHP_PINMUX_FUNC_D)
+/** LPM */
+#define MCHP_PINMUX_PERIPH_lpm 0U
 
-#define MCHP_PINMUX_PA09_SERCOM0_PAD1 \
-	MCHP_PINMUX(MCHP_PIN_PA09, MCHP_PINMUX_FUNC_D)
+/** Wake-up pin sources */
+#define MCHP_PINMUX_PERIPH_wkup0 0U
+#define MCHP_PINMUX_PERIPH_wkup1 1U
 
-/* SERCOM1 */
-#define MCHP_PINMUX_PA16_SERCOM1_PAD0 \
-	MCHP_PINMUX(MCHP_PIN_PA16, MCHP_PINMUX_FUNC_C)
+/** Selects pin to be used as GPIO */
+#define MCHP_PINMUX_FUNC_gpio 0U
+/** Selects pin to be used as by some peripheral */
+#define MCHP_PINMUX_FUNC_periph 1U
+/** Selects pin to be used as extra function */
+#define MCHP_PINMUX_FUNC_extra 2U
+/** Selects pin to be used as system function */
+#define MCHP_PINMUX_FUNC_system 3U
+/** Selects and configure pin to be used in Low Power Mode */
+#define MCHP_PINMUX_FUNC_lpm 4U
+/** Selects and configure wake-up pin sources Low Power Mode */
+#define MCHP_PINMUX_FUNC_wakeup 5U
 
-#define MCHP_PINMUX_PA17_SERCOM1_PAD1 \
-	MCHP_PINMUX(MCHP_PIN_PA17, MCHP_PINMUX_FUNC_C)
+/** Pinmux bit field position. */
+#define MCHP_PINCTRL_PINMUX_POS (16U)
+/** Pinmux bit field mask. */
+#define MCHP_PINCTRL_PINMUX_MASK (0xFFFF)
 
-/* TC0 */
-#define MCHP_PINMUX_PA04_TC0_WO0 \
-	MCHP_PINMUX(MCHP_PIN_PA04, MCHP_PINMUX_FUNC_E)
+/** Port field mask. */
+#define MCHP_PINMUX_PORT_MSK (0xFU)
+/** Port field position. */
+#define MCHP_PINMUX_PORT_POS (0U)
+/** Pin field mask. */
+#define MCHP_PINMUX_PIN_MSK (0x1FU)
+/** Pin field position. */
+#define MCHP_PINMUX_PIN_POS (MCHP_PINMUX_PORT_POS + 4U)
+/** Function field mask. */
+#define MCHP_PINMUX_FUNC_MSK (0x7U)
+/** Function field position. */
+#define MCHP_PINMUX_FUNC_POS (MCHP_PINMUX_PIN_POS + 5U)
+/** Peripheral field mask. */
+#define MCHP_PINMUX_PERIPH_MSK (0xFU)
+/** Peripheral field position. */
+#define MCHP_PINMUX_PERIPH_POS (MCHP_PINMUX_FUNC_POS + 3U)
 
-/* EIC */
-#define MCHP_PINMUX_PB03_EIC_EXTINT3 \
-	MCHP_PINMUX(MCHP_PIN_PB03, MCHP_PINMUX_FUNC_A)
+/*
+ * MCHP pinmux bit field macro:
+ * Combines port, pin number, function, and peripheral mux into a single 32-bit value.
+ */
+#define MCHP_PINMUX(port, pin_num, pin_mux, func)                              \
+  ((((MCHP_PINMUX_PORT_##port) & MCHP_PINMUX_PORT_MSK)                         \
+    << MCHP_PINMUX_PORT_POS) |                                                 \
+   (((pin_num) & MCHP_PINMUX_PIN_MSK) << MCHP_PINMUX_PIN_POS) |                \
+   (((MCHP_PINMUX_FUNC_##func) & MCHP_PINMUX_FUNC_MSK)                         \
+    << MCHP_PINMUX_FUNC_POS) |                                                 \
+   (((MCHP_PINMUX_PERIPH_##pin_mux) & MCHP_PINMUX_PERIPH_MSK)                  \
+    << MCHP_PINMUX_PERIPH_POS))
 
-#endif
+/*
+ * Getters used by pinctrl_mchp_port_g1.c
+ */
+#define MCHP_PINMUX_PIN_GET(pincfg)                                            \
+  ((pincfg >> MCHP_PINMUX_PIN_POS) & MCHP_PINMUX_PIN_MSK)
+#define MCHP_PINMUX_PORT_GET(pincfg)                                           \
+  ((pincfg >> MCHP_PINMUX_PORT_POS) & MCHP_PINMUX_PORT_MSK)
+#define MCHP_PINMUX_FUNC_GET(pincfg)                                           \
+  ((pincfg >> MCHP_PINMUX_FUNC_POS) & MCHP_PINMUX_FUNC_MSK)
+#define MCHP_PINMUX_PERIPH_GET(pincfg)                                         \
+  ((pincfg >> MCHP_PINMUX_PERIPH_POS) & MCHP_PINMUX_PERIPH_MSK)
+
+/* SERCOM0 for Curiosity Nano CDC UART */
+#define MCHP_PINMUX_PA22_SERCOM0_PAD0 \
+	MCHP_PINMUX(a, 22, c, periph)
+
+#define MCHP_PINMUX_PA23_SERCOM0_PAD1 \
+	MCHP_PINMUX(a, 23, c, periph)
+
+/* SERCOM3 for Curiosity Nano CDC UART */
+#define MCHP_PINMUX_PB08_SERCOM3_PAD0 \
+	MCHP_PINMUX(b, 8, d, periph)
+
+#define MCHP_PINMUX_PB09_SERCOM3_PAD1 \
+	MCHP_PINMUX(b, 9, d, periph)
+
+#endif /* INCLUDE_DT_BINDINGS_PIC32CM_LS_COMMON_MCHP_PINCTRL_PINMUX_PIC32C_H_ */
 

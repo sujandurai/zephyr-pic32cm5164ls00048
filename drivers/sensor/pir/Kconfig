@@ -1,0 +1,6 @@
+config PIR
+	bool "PIR Motion Sensor"
+	default y
+	depends on GPIO
+	help
+	  Enable the PIR motion sensor driver.
