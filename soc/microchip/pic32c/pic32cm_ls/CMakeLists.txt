@@ -4,6 +4,8 @@
 
 add_subdirectory(common)
 
+message(STATUS "DEBUG: ZEPHYR_HAL_MICROCHIP_MODULE_DIR = ${ZEPHYR_HAL_MICROCHIP_MODULE_DIR}")
+
 zephyr_include_directories(${SOC_SERIES})
 zephyr_include_directories(${ZEPHYR_HAL_MICROCHIP_MODULE_DIR}/packs/pic32c/pic32cm_ls/${SOC_SERIES}/include)
 
