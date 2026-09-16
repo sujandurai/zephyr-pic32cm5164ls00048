@@ -8,6 +8,7 @@
 
 #include <microchip/pic32c/pic32cm_ls/pic32cm_ls00/pic32cm5164ls00048.dtsi>
 #include <zephyr/dt-bindings/gpio/gpio.h>
+#include <zephyr/dt-bindings/input/input-event-codes.h>
 #include "pic32cm_ls00_cnano-pinctrl.dtsi"
 
 / {
@@ -49,6 +50,7 @@
 		button0: button_0 {
 			gpios = <&porta 27 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
 			label = "SW0 (PA27)";
+			zephyr,code = <INPUT_KEY_0>;
 		};
 	};
 };
